@@ -1,0 +1,32 @@
+<section ng-controller="trivia">
+
+    <section class='questions'>
+
+        <div ng-repeat='question in game.questions.questions' class='question' ng-show='count == $index'>
+
+            <div class='header blue'>
+                <p class='center'>When was</p>
+                <p class='large center'>{{question}}</p>
+                <p class='center'>released?</p>
+            </div>
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2'>
+                        <label for="{{$index}}">Date</label>
+                        <input type="number" class='form-control ng-invalid' id='{{$index}}' name="input" ng-model='thisPlayer.answers[$index]' min="0" max="9999">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Nav Icons-->
+    <a href='#/' ng-init='count=0' ng-show='count == 0' class='nav-item left'><img class='img-responsive' src='/images/exit.svg'></a>
+    <a ng-click='count = count -1' ng-hide='count == 0' class='nav-item left'><img class='img-responsive' src='/images/back.svg'></a>
+    <a ng-click='end()' ng-show='count == game.questions.questions.length -1' class='nav-item right'><img class='img-responsive' src='/images/done.svg'></a>
+    <a ng-click='count = count +1' ng-hide='count == game.questions.questions.length -1' class='nav-item right'><img class='img-responsive' src='/images/next.svg'></a>
+
+</section>

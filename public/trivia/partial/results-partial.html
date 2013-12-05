@@ -1,0 +1,32 @@
+<section ng-controller="trivia">
+
+    <div class='header blue'>
+        <h1 class='center'>The End</h3>
+    </div>
+
+    <div class='container'>
+
+        <div class='row'>
+            <div ng-repeat='player in game.players' ng-class='setResultClass()'>
+                <h3 class='center'>Player {{$index +1}}</h3>
+                <h1 class='orange center'>{{player.score }}<h1>
+            </div>
+        </div>
+
+        <h3 class='center' ng-show='result == "wait"'>Waiting for player to finish.</h3>
+        <h3 class='center' ng-show='result == "win"'>You're a winner!</h3>
+        <h3 class='center' ng-show='result == "loss"'>You lose, sorry mate.</h3>
+        <h3 class='center' ng-show='result == "draw"'>It's a draw?</h3>
+        <h3 class='center' ng-show='result == "solo"'>You're playing solo. I guess this makes you a winner!</h3>
+        
+        <br>
+
+        <div class='row'>
+            <div class='col-sx-10 col-sx-offset-1 col-sm-6 col-sm-offset-3'>
+                <a href='#/' class="btn btn-info btn-block" role="button">Back to Menu</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
