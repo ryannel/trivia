@@ -1,26 +1,20 @@
-# trivia [![Build Status](https://secure.travis-ci.org/ryannel/trivia.png?branch=master)](http://travis-ci.org/ryannel/trivia)
+# Trivia
 
-Movie Trivia
+Movie trivia quiz
 
 ## Getting Started
-Install the module with: `npm install`
 
-```javascript
-var trivia = require('trivia');
-trivia.awesome(); // "awesome"
+Install dependencies *(run in root directory)*
+
+```
+ npm install
 ```
 
-## Documentation
-_(Coming soon)_
+Start server
 
-## Examples
-_(Coming soon)_
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style.
-
-## Release History
-_(Nothing yet)_
+```
+node ./server
+```
 
 ## License
 Copyright (c) 2013 Ryan Nel. Licensed under the MIT license.
